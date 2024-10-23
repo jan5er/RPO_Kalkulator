@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator - Pretvorbe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="Kalkulator.html">Kalkulator</a></li>
+            <li><a href="Pretvorbe.html">Pretvorbe</a></li>
+            <li><a href="LogicnaVrata.html">Logična vrata</a></li>
+        </ul>
+    </nav>
+    <main>
+        <
+        <div style="padding-bottom: 0px; margin-bottom: 50px;" id="container">
+            <input type="file" id="fileInput" accept=".txt" onchange="uploadFileStSistemi()">
+            <input type="display" id="display" readonly style="height: 70px; border-radius: 20px 20px 20px 20px; margin-bottom: 50px; font-weight: bold;">
+
+            
+                <div id="conversionDisplay">
+                    <div class="posamezenDisplay">
+                        <label style="display: flexbox;"><button id="hex" class="pretvarjanjeButton" onclick="activeHex(), clearDisplay(), clearConversions()">HEX</button><span id="hexDisplay"><b>0</b></span></label><br>
+                    </div>
+                    <div class="posamezenDisplay">
+                        <label style="display: flexbox;"><button id="dec" class="pretvarjanjeButton" onclick="activeDec(), clearDisplay(), clearConversions()">DEC</button><span id="decDisplay"><b>0</b></span></label><br>
+                    </div>
+                    <div class="posamezenDisplay">
+                        <label style="display: flexbox;"><button id="oct" class="pretvarjanjeButton" onclick="activeOct(), clearDisplay(), clearConversions()">OCT</button><span id="octDisplay"><b>0</b></span></label><br>
+                    </div>
+                    <div class="posamezenDisplay">
+                        <label style="display: flexbox;"><button id="bin" class="pretvarjanjeButton" onclick="activeBin(), clearDisplay(), clearConversions()">BIN</button><span id="binDisplay"><b>0</b></span></label><br>
+                    </div>
+            </div><br>
+        </div>
+
+        <div>
+            <button class="keypad hex dec bin oct" onclick="appendNumber('0'), convert()">0</button>
+            <button class="keypad hex dec bin oct" onclick="appendNumber('1'), convert()">1</button>
+            <button class="keypad hex dec oct" onclick="appendNumber('2'), convert()">2</button>
+            <button class="keypad hex dec oct" onclick="appendNumber('3'), convert()">3</button>
+            <button class="keypad hex dec oct" onclick="appendNumber('4'), convert()">4</button>
+            <button class="keypad hex dec oct" onclick="appendNumber('5'), convert()">5</button>
+            <button class="keypad hex dec oct" onclick="appendNumber('6'), convert()">6</button>
+            <button class="keypad hex dec oct" onclick="appendNumber('7'), convert()">7</button>
+            <button class="keypad hex dec" onclick="appendNumber('8'), convert()">8</button>
+            <button class="keypad hex dec" onclick="appendNumber('9'), convert()">9</button><br>
+            <button class="keypad hex" onclick="appendNumber('A'), convert()">A</button>
+            <button class="keypad hex" onclick="appendNumber('B'), convert()">B</button>
+            <button class="keypad hex" onclick="appendNumber('C'), convert()">C</button>
+            <button class="keypad hex" onclick="appendNumber('D'), convert()">D</button>
+            <button class="keypad hex" onclick="appendNumber('E'), convert()">E</button>
+            <button class="keypad hex" onclick="appendNumber('F'), convert()">F</button>
+            <button id="C" onclick="clearDisplay(), convert(), clearConversions()">C</button>
+            <button style="width: 8%; margin-bottom: -20px;" id="next">NEXT</button><br>
+
+        </div>
+    </main>
+        
+    </body>
+    <footer>
+        ORS 2. SEMINARSKA NALOGA (2024)<br>
+        Jan Peter Vajda, Marko Stanić
+    </footer>
+
+</html>

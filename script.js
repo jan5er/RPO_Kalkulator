@@ -562,6 +562,52 @@ function convert(stevilo, sistem) {
     }
 }
 
+function convert(stevilo, sistem) {
+    let input = document.getElementById("display").value;
+    let outputHex = document.getElementById("hexDisplay");
+    let outputDec = document.getElementById("decDisplay");
+    let outputOct = document.getElementById("octDisplay");
+    let outputBin = document.getElementById("binDisplay");
+    let activeSystem = currentlyActive();
+
+    if (activeSystem === "hex") {
+        if (/^[0-9A-Fa-f]+$/.test(input)) {
+            outputDec.innerHTML = hexToDec(input);
+            outputOct.innerHTML = hexToOct(input);
+            outputBin.innerHTML = hexToBin(input);
+            outputHex.innerHTML = input;
+        } else {
+            outputHex.innerHTML = "Napaka";
+        }
+    } else if (activeSystem === "dec") {
+        if (/^[0-9]+$/.test(input)) {
+            outputHex.innerHTML = decToHex(input);
+            outputOct.innerHTML = decToOct(input);
+            outputBin.innerHTML = decToBin(input);
+            outputDec.innerHTML = input;
+        } else {
+            outputDec.innerHTML = "Napaka";
+        }
+    } else if (activeSystem === "oct") {
+        if (/^[0-7]+$/.test(input)) {
+            outputHex.innerHTML = octToHex(input);
+            outputDec.innerHTML = octToDec(input);
+            outputBin.innerHTML = octToBin(input);
+            outputOct.innerHTML = input;
+        } else {
+            outputOct.innerHTML = "Napaka";
+        }
+    } else if (activeSystem === "bin") {
+        if (/^[01]+$/.test(input)) {
+            outputHex.innerHTML = binToHex(input);
+            outputDec.innerHTML = binToDec(input);
+            outputOct.innerHTML = binToOct(input);
+            outputBin.innerHTML = input;
+        } else {
+            outputBin.innerHTML = "Napaka";
+        }
+    }
+}
 
 function clearConversions() {
     let outputHex = document.getElementById("hexDisplay");

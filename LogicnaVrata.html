@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator - Pretvorbe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="Kalkulator.html">Kalkulator</a></li>
+            <li><a href="Pretvorbe.html">Pretvorbe</a></li>
+            <li><a href="LogicnaVrata.html">Logična vrata</a></li>
+        </ul>
+    </nav>
+
+<main>
+    <div id="container">
+        <div class="logic-calculator">
+            <input type="file" id="fileInput" accept=".txt" onchange="openGatesFile()">
+            <input type="text" id="display" readonly style="height: 200px; border-radius: 20px 20px 20px 20px; margin-bottom: 20px;"><br>
+            <button id="C" onclick="clearDisplay()">C</button>
+            <button id="CE" onclick="CE()">CE</button><br>
+            <button class="operator" id="and">AND</button>
+            <button class="operator" id="or">OR</button>
+            <button class="operator" id="xor">XOR</button>
+            <button class="operator" id="neg">NOT</button><br>
+            <button onclick="appendNumber('0')" id="nic">0</button>
+            <button onclick="appendNumber('1')" id="ena">1</button><br>
+            <button id="enakost" style="width: 90%;" onclick="calculate()">=</button><br>
+        </div>
+        <div id="result"></div>
+    </div>
+</main>
+    
+    
+</body>
+<footer>
+    ORS 2. SEMINARSKA NALOGA (2024)<br>
+    Jan Peter Vajda, Marko Stanić
+</footer>
+</html>
