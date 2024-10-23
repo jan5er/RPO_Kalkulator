@@ -1,0 +1,283 @@
+:root {
+    --primary: #00171F;
+    --secondary: #3C6E71;
+    --3: #FFFFFF;
+    --4: #D9D9D9;
+    --10: #7A89C2;
+    --5: #284B63;
+    --6: #1c3f47;
+    --7: #EFF6E0;
+    --8: #FF6B6B;
+    --9: #AFA2FF;
+    --11: #003459;
+    --12: #007EA7;
+    --darkgrey: #1e262a;
+    --beige: #E2E8CE;
+    --greenish: #ACBFA4;
+    --confirm: #3d9162;
+    --deny: #FF6B6B;
+    --orange: #FF7F11;
+    --activezelena: #136F63;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.8em;
+    box-sizing: border-box;
+    color: var(--3);
+}
+
+html, body {
+    height: 60%;
+    width: 100%;
+}
+
+html {
+    min-width: 300px;
+    background-color: var(--primary);
+}
+
+body {
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: absolute;
+    margin-top: 10vh;
+}
+
+nav {
+    font-weight: bold;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--secondary);
+    color: var(--beige);
+    z-index: 1000;
+    border: var(--primary) solid;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--beige);
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+nav li:hover {
+    background-color: var(--6);
+    margin: 0px 20px 0px 20px;
+}
+
+nav li .active {
+    background-color: var(--6);
+}
+
+main {
+    margin-top: 0px;
+}
+
+footer {
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: var(--darkgrey);
+    line-height: normal;
+}
+
+button {
+    background-color: var(--secondary);
+    color: var(--beige);
+    border-radius: 5px;
+    border: none;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin: 5px;
+    aspect-ratio: 1 / 1;
+    height: 70px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--6);
+}
+
+#C {
+    aspect-ratio: 2.21 / 1;
+    background-color: var(--deny);
+}
+
+#C:active {
+    background-color: red;
+}
+
+#CE {
+    aspect-ratio: 2.21 / 1;
+    background-color: var(--orange);
+}
+
+#CE:active {
+    background-color: orangered;
+}
+
+#enakost {
+    background-color: var(--confirm);
+}
+
+#enakost:active {
+    background-color: var(--activezelena);
+}
+
+#next {
+    background-color: var(--10);
+}
+
+#next:active {
+    background-color: var(--9);
+}
+
+form {
+    color: var(--primary);
+}
+
+#display {
+    width: 90%;
+    aspect-ratio: 29/10;
+    background-color: var(--primary);
+    color: var(--3);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    text-align: right;
+    font-size: x-large;
+    justify-content: top;
+    align-items: top;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px 20px 20px 20px;
+    border: var(--beige) solid 4px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#container {
+    border: var(--beige) solid 4px;
+    padding: 3%;
+    width: 25%;
+    margin-left: 37.5%;
+    border-radius: 20px;
+}
+
+.pretvorba {
+    height: 30px;
+    width: 98px;
+    border-radius: 20px;
+    margin-top: 4px;
+    margin-bottom: 10%;
+    font-size: small;
+    border-radius: 0%;
+    background-color: var(--beige);
+    color: #00171F;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bolder;
+}
+
+.pretvorba:active {
+    background-color: var(--confirm);
+    color: var(--3);
+}
+
+.pretvorba.active {
+    background-color: var(--confirm);
+    color: var(--3);
+}
+
+.operator {
+    background-color: var(--6);
+}
+
+.operator:active {
+    background-color: #003459
+}
+
+#nic,
+#ena {
+    width: 43%;
+}
+
+#fileInput {
+    margin-left: 20%;
+}
+
+.posamezenDisplay {
+    border: var(--beige) solid 4px;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-align: left;
+    padding: 5px;
+    padding-top: 6px
+
+}
+
+.pretvarjanjeButton {
+    font-size: medium;
+    background-color: var(--beige);
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 70px;
+    margin-top: 1px;
+    margin-bottom: 0%;
+    text-align: center;
+    font-weight: bolder;
+    margin-right: 30px;
+    color: var(--primary);
+    font-weight: bolder;
+    height: 25px;
+    border-radius: 20px;
+}
+
+.pretvarjanjeButton.active {
+    background-color: var(--12);
+    color: var(--3);
+
+}
+
+.pretvarjanjeButton:active {
+    background-color: var(--12);
+    color: var(--3);
+}
+
+.keypad.prepoved {
+    background-color: grey;
+    color: var(--3);
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#conversionDisplay {
+    margin-bottom: 10%;
+}
+
