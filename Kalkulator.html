@@ -15,46 +15,52 @@
             <li id="3"><a href="LogicnaVrata.html">Logična Vrata</a></li>
         </ul>
     </nav>
+
 <main>
     <div style="padding-top: 30px;" id="container">
         <div class="kalkulator">
             <input type="file" id="fileInput" accept=".txt" onchange="uploadFile()">
-            <input type="text" style="margin-bottom: 10px; height: 120px; word-wrap: break-word;" id="display" readonly><br>
+            <input type="text" style="margin-bottom: 10px; height: 80px; word-wrap: break-word; font-size: 20px; padding: 10px;" id="display" readonly><br>
 
+            <div class="button-row">
+                <button id="C" onclick="clearDisplay()">C</button>
+                <button id="CE" onclick="CE()">CE</button>
+                <button class="operator" onclick="appendOperator('*')">*</button>
+                <button class="operator" onclick="appendOperator('/')">/</button>
+            </div>
+            <div class="button-row">
+                <button class="operator" onclick="appendOperator('%')">%</button>
+                <button style="text-transform: lowercase;" class="operator" onclick="potenca()">x²</button>
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button class="operator" onclick="appendFunction('√')">√</button>
+            </div>
+            <div class="button-row">
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button class="operator" onclick="appendOperator('+')">+</button>
+            </div>
+            <div class="button-row">
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button class="operator" onclick="appendOperator('-')">-</button>
+            </div>
+            <div class="button-row">
+                <button onclick="appendDecimal()">.</button>
+                <button id="zero" onclick="appendNumber('0')">0</button>
+                <button class="operator" onclick="appendOklepaj('(')">(</button>
+                <button class="operator" onclick="appendOklepaj(')')">)</button>
+            </div>
 
-            <button id="C" onclick="clearDisplay()">C</button>
-            <button id="CE" onclick="CE()">CE</button><br>
-            <button class="operator" onclick="appendOperator('*')">*</button>
-
-            <button class="operator" onclick="appendOperator('/')">/</button>
-            <button class="operator" onclick="appendOperator('%')">%</button>
-            <button style="text-transform: lowercase;" class="operator" onclick="potenca()">x²</button>
-            <button onclick="appendNumber('7')">7</button>
-            <button onclick="appendNumber('8')">8</button>
-            <button onclick="appendNumber('9')">9</button>
-            <button class="operator" onclick="appendFunction('√')">√</button><br>
-            <button onclick="appendNumber('4')">4</button>
-            <button onclick="appendNumber('5')">5</button>
-            <button onclick="appendNumber('6')">6</button>
-            <button class="operator" onclick="appendOperator('+')">+</button> <br>
-            <button onclick="appendNumber('1')">1</button>
-            <button onclick="appendNumber('2')">2</button>
-            <button onclick="appendNumber('3')">3</button>
-            <button class="operator" onclick="appendOperator('-')">-</button> <br>
-            <button onclick="appendDecimal()">.</button>
-            <button id="zero" onclick="appendNumber('0')">0</button>
-            <button class="operator" onclick="appendOklepaj('(')">(</button>
-            <button class="operator" onclick="appendOklepaj(')')">)</button> <br>
-            <button style="width: 90%; margin-bottom: -20px;" onclick="calculate()" id="enakost">=</button><br>
+            <div class="button-row">
+                <button style="width: 100%; margin-bottom: -20px;" onclick="calculate()" id="enakost">=</button>
+            </div>
         </div>
     </div>
-            
 </main>
 
-
 </body>
-<footer>
-    ORS 2. SEMINARSKA NALOGA (2024)<br>
-    Jan Peter Vajda, Marko Stanić
-</footer>
 </html>
